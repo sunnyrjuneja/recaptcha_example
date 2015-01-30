@@ -1,2 +1,9 @@
-<h1>Animals#new</h1>
-<p>Find me in app/views/animals/new.html.erb</p>
+<h3>What's your favorite animal?</h3>
+<%= form_for @animal do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= recaptcha_tags %>
+
+  <%= f.submit %>
+<% end %>
